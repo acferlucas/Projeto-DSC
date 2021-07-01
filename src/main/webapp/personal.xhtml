@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+ xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+ <title>Converter Graus - Stateless</title>
+</h:head>
+
+ <h:body>
+  <h:form>
+   <h:outputLabel value="Projeto My.Personal teste"/>
+   <hr/>
+   <h:outputLabel value="Somar (a + b): "/>
+   <h:inputText value="#{calculadoraManagedBean.a}" ></h:inputText>
+   +
+   <h:inputText value="#{calculadoraManagedBean.b}" ></h:inputText>
+   <h:commandButton action="${calculadoraManagedBean.testSoma()}" value="Somar"/><br/>
+   <h:outputLabel value="Resultado Soma: "/>
+   <h:outputText value="#{calculadoraManagedBean.resultadoSoma}"/>
+  </h:form>
+ </h:body>
+ </html>
