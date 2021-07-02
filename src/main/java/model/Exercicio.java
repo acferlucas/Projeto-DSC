@@ -5,7 +5,16 @@ public class Exercicio {
 	private String nome;
 	private int repeticoes;
 	private int series;
+	private String dia;
 	
+	
+	
+	public String getDia() {
+		return dia;
+	}
+	public void setDia(String dia) {
+		this.dia = dia;
+	}
 	public String getNome() {
 		return nome;
 	}

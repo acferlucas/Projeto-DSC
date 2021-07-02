@@ -1,5 +1,8 @@
 package model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import repositorio.RepositorioAluno;
 
 public class Aluno extends Pessoa {
@@ -10,9 +13,10 @@ public class Aluno extends Pessoa {
 	private double biceps;
 	private double coxa;
 	private double peitoral;
+	private List<Exercicio> exercicios;
 	
 	public Aluno() {
-		// TODO Auto-generated constructor stub
+		this.exercicios = new ArrayList<Exercicio>();
 	}
 
 	public double getAltura() {
@@ -63,6 +67,14 @@ public class Aluno extends Pessoa {
 		this.peitoral = peitoral;
 	}
 	
+	public List<Exercicio> getExercicios() {
+		return exercicios;
+	}
+
+	public void setExercicios(List<Exercicio> exercicios) {
+		this.exercicios = exercicios;
+	}
+	
 	public static void main(String[] args) {
 		
 		Aluno lucas = new Aluno();
@@ -102,6 +114,8 @@ public class Aluno extends Pessoa {
 		}
 		
 	}
+
+
 	
 	
 }
