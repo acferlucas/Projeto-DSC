@@ -9,11 +9,12 @@
 <h:head>
 </h:head>
 <h:body>
+	<h1><h:outputText value="Cadastro Aluno:"/></h1>
      <h:form>
           <p:messages id="messages" />
-          <p:panelGrid columns="2">
+          <h:panelGrid columns="2">
                 <h:outputLabel value="ID:" />
-                <p:spinner id="id" value="" />
+                <h:inputText id="id" value="" />
                 
                 <h:outputLabel value="Nome:" />
                 <h:inputText id="nome" value="" />
@@ -26,10 +27,14 @@
                 
                 <h:outputLabel value="Senha:" />
                 <h:inputText id="senha" value="" />
-
-                <h:commandButton  value="Cadastrar" action="" />
+				
+				<h:selectOneRadio> 
+				   <f:selectItem itemValue = "1" itemLabel = "Aluno" /> 
+				   <f:selectItem itemValue = "2" itemLabel = "Personal" />
+				</h:selectOneRadio> <br/>
+                <h:commandButton  value="Cadastrar"/>
                 
-          </p:panelGrid>
+          </h:panelGrid>
      </h:form>
 </h:body>
 </html>

@@ -1,0 +1,5 @@
+model/Pessoa.class
+model/Exercicio.class
+model/Personal.class
+model/Aluno.class
+repositorio/RepositorioPessoa.class
