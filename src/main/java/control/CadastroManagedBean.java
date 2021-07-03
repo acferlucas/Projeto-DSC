@@ -9,7 +9,7 @@ import javax.inject.Named;
 import repositorio.RepositorioAluno;
 import repositorio.RepositorioPersonal;
 
-@Named("alunoMB")
+@Named("cadastroMB")
 @SessionScoped
 public class CadastroManagedBean implements Serializable{
 
@@ -17,13 +17,13 @@ public class CadastroManagedBean implements Serializable{
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	
+	/*
 	@EJB
 	RepositorioAluno repositorioAluno;
 	
 	@EJB
 	RepositorioPersonal repositorioPersonal;
-	
+	*/
 	private  String nome;
 	private  String nascimento;
 	private  String email;

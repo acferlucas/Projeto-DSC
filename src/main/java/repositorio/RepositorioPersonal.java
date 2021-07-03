@@ -1,14 +1,22 @@
 package repositorio;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
+
+import javax.ejb.Stateful;
 
 import model.Personal;
 
 
-
-public class RepositorioPersonal {
+@Stateful
+public class RepositorioPersonal implements Serializable{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	private static RepositorioPersonal myself = null;
     
     private List<Personal> Personais = null;
