@@ -1,11 +1,21 @@
 package repositorio;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.ejb.Stateful;
+
 import model.Aluno;
 
-public class RepositorioAluno {
+
+@Stateful
+public class RepositorioAluno implements Serializable{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 
 	private static RepositorioAluno myself = null;
     

@@ -1,5 +1,7 @@
-model/Pessoa.class
-model/Exercicio.class
-model/Personal.class
-model/Aluno.class
-repositorio/RepositorioPessoa.class
+model\Personal.class
+model\Pessoa.class
+model\Aluno.class
+repositorio\RepositorioPersonal.class
+model\Exercicio.class
+repositorio\RepositorioExercicio.class
+repositorio\RepositorioAluno.class
