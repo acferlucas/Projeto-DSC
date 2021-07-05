@@ -1,5 +1,6 @@
 repositorio/RepositorioExercicio.class
 model/Aluno.class
+model/PersonaisMB.class
 model/AlunosMB.class
 model/CadastroAlunoMB.class
 repositorio/RepositorioPersonal.class
@@ -7,3 +8,4 @@ model/Pessoa.class
 model/Exercicio.class
 model/Personal.class
 repositorio/RepositorioAluno.class
+model/CadastroPersonalMB.class

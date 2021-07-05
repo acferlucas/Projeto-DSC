@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.ejb.Stateful;
 
-import repositorio.RepositorioAluno;
 
 @Stateful
 public class Aluno extends Pessoa implements Serializable{
@@ -78,45 +77,7 @@ public class Aluno extends Pessoa implements Serializable{
 		this.exercicios = exercicios;
 	}
 	
-	public static void main(String[] args) {
-		
-		Aluno lucas = new Aluno();
-		lucas.setId(1);
-		lucas.setCidade(null);
-		lucas.setNome("lucas");
-		lucas.setPeso(67);
-		
-		Aluno marcel = new Aluno();
-		marcel.setId(2);
-		marcel.setCidade(null);
-		marcel.setNome("Luiz Marcel");
-		marcel.setPeso(77);
-		
-		RepositorioAluno.getCurrentInstance().create(lucas);
-		RepositorioAluno.getCurrentInstance().create(marcel);
-		System.out.println("------------------Testando readAll------------------");
-		for(Aluno aux : RepositorioAluno.getCurrentInstance().readAll()) {
-			System.out.println(aux.getNome());
-		}
-		System.out.println("------------------Testando Delete------------------");
-		
-		RepositorioAluno.getCurrentInstance().delete(RepositorioAluno.getCurrentInstance().read(2));
-		
-		for(Aluno aux : RepositorioAluno.getCurrentInstance().readAll()) {
-			System.out.println(aux.getNome());
-		}
-		
-		System.out.println("------------------Testando Update------------------");
-		Aluno novolucas = RepositorioAluno.getCurrentInstance().read(1);
-		novolucas.setNome("lucas Silva");
-		
-		RepositorioAluno.getCurrentInstance().update(novolucas);
-		
-		for(Aluno aux : RepositorioAluno.getCurrentInstance().readAll()) {
-			System.out.println(aux.getNome());
-		}
-		
-	}
+	
 
 
 	

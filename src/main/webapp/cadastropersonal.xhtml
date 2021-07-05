@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+     xmlns:h="http://java.sun.com/jsf/html"
+     xmlns:f="http://java.sun.com/jsf/core"
+    >
+
+<h:head>
+</h:head>
+<h:body>
+	<h1><h:outputText value="Cadastro Personal"/></h1>
+     <h:form>
+          <h:panelGrid columns="2">
+                <h:outputLabel value="ID:" />
+                <h:inputText id="id" value="#{cadastroPersonalMB.codigo}" />
+                
+                <h:outputLabel value="Nome:" />
+                <h:inputText id="nome" value="#{cadastroPersonalMB.personalbean.nome}" />
+
+                <h:outputLabel value="Data de Nascimento:" />
+                <h:inputText id="nascimento" value="#{cadastroPersonalMB.personalbean.nascimento}" />
+                
+                <h:outputLabel value="Endereço" />
+                <h:inputText id="endereco" value="#{cadastroPersonalMB.personalbean.endereco}" />
+                
+                <h:outputLabel value="Cidade :" />
+                <h:inputText id="cidade" value="#{cadastroPersonalMB.personalbean.cidade}" />
+
+                <h:outputLabel value="Email:" />
+                <h:inputText id="email" value="#{cadastroPersonalMB.personalbean.email}" />
+                
+                <h:outputLabel value="Senha:" />
+                <h:inputText id="senha" value="#{cadastroPersonalMB.personalbean.senha}" />
+          </h:panelGrid>
+         <h:commandButton  value="Salvar" action="#{cadastroPersonalMB.salvar}"/>
+     </h:form>
+</h:body>
+</html>
