@@ -1,11 +1,14 @@
 package model;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
+import javax.ejb.Stateful;
 
 import repositorio.RepositorioAluno;
 
-public class Aluno extends Pessoa {
+@Stateful
+public class Aluno extends Pessoa implements Serializable{
 
 	private double altura;
 	private double peso;

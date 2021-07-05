@@ -4,37 +4,36 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
      xmlns:h="http://java.sun.com/jsf/html"
      xmlns:f="http://java.sun.com/jsf/core"
-     xmlns:p="http://primefaces.org/ui">
+    >
 
 <h:head>
 </h:head>
 <h:body>
 	<h1><h:outputText value="Cadastro Aluno:"/></h1>
      <h:form>
-          <p:messages id="messages" />
           <h:panelGrid columns="2">
                 <h:outputLabel value="ID:" />
-                <h:inputText id="id" value="" />
+                <h:inputText id="id" value="#{cadastroAlunoMB.codigo}" />
                 
                 <h:outputLabel value="Nome:" />
-                <h:inputText id="nome" value="" />
+                <h:inputText id="nome" value="#{cadastroAlunoMB.alunobean.nome}" />
 
                 <h:outputLabel value="Data de Nascimento:" />
-                <h:inputText id="nascimento" value="" />
+                <h:inputText id="nascimento" value="#{cadastroAlunoMB.alunobean.nascimento}" />
+                
+                <h:outputLabel value="Endereço" />
+                <h:inputText id="endereco" value="#{cadastroAlunoMB.alunobean.endereco}" />
+                
+                <h:outputLabel value="Cidade :" />
+                <h:inputText id="cidade" value="#{cadastroAlunoMB.alunobean.cidade}" />
 
                 <h:outputLabel value="Email:" />
-                <h:inputText id="email" value="" />
+                <h:inputText id="email" value="#{cadastroAlunoMB.alunobean.email}" />
                 
                 <h:outputLabel value="Senha:" />
-                <h:inputText id="senha" value="" />
-				
-				<h:selectOneRadio> 
-				   <f:selectItem itemValue = "1" itemLabel = "Aluno" /> 
-				   <f:selectItem itemValue = "2" itemLabel = "Personal" />
-				</h:selectOneRadio> <br/>
-                <h:commandButton  value="Cadastrar"/>
-                
+                <h:inputText id="senha" value="#{cadastroAlunoMB.alunobean.senha}" />
           </h:panelGrid>
+         <h:commandButton  value="Salvar" action="#{cadastroAlunoMB.salvar}"/>
      </h:form>
 </h:body>
 </html>

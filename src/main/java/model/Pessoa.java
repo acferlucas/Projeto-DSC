@@ -44,7 +44,7 @@ public abstract class Pessoa {
     }
 
     public void setNascimento(String nascimento) {
-        this.nascimento = getNascimento();
+        this.nascimento = nascimento;
     }
 
    public String getCidade() {

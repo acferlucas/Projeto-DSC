@@ -1,8 +1,9 @@
-model\Personal.class
-model\Pessoa.class
-control\CadastroManagedBean.class
-model\Aluno.class
-repositorio\RepositorioPersonal.class
-model\Exercicio.class
-repositorio\RepositorioExercicio.class
-repositorio\RepositorioAluno.class
+repositorio/RepositorioExercicio.class
+model/Aluno.class
+model/AlunosMB.class
+model/CadastroAlunoMB.class
+repositorio/RepositorioPersonal.class
+model/Pessoa.class
+model/Exercicio.class
+model/Personal.class
+repositorio/RepositorioAluno.class
