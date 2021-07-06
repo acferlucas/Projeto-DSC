@@ -1,10 +1,11 @@
 
-package model;
+package control;
 
 import java.io.Serializable;
 import javax.ejb.EJB;
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Named;
+import model.Personal;
 import repositorio.RepositorioPersonal;
 
 @RequestScoped
@@ -32,10 +33,12 @@ public class CadastroPersonalMB implements Serializable{
         this.codigo = codigo;
     }
     
-    public void salvar(){
+    public String salvar(){
         
         personalbean.setId(Integer.parseInt(codigo));
         RepositorioPersonal.getCurrentInstance().create(personalbean);
         System.out.println("Personal : " +personalbean.getNome() + "Salvo com sucesso");
+        
+        return "personais.xhtml";
     }
 }

@@ -1,11 +1,12 @@
 
-package model;
+package control;
 
 import java.io.Serializable;
 import java.util.List;
 import javax.annotation.PostConstruct;
 import javax.faces.view.ViewScoped;
 import javax.inject.Named;
+import model.Personal;
 import repositorio.RepositorioPersonal;
 
 @Named

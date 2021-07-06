@@ -1,11 +1,11 @@
+control/PersonaisMB.class
 repositorio/RepositorioExercicio.class
+control/CadastroPersonalMB.class
 model/Aluno.class
-model/PersonaisMB.class
-model/AlunosMB.class
-model/CadastroAlunoMB.class
+control/CadastroAlunoMB.class
 repositorio/RepositorioPersonal.class
 model/Pessoa.class
 model/Exercicio.class
 model/Personal.class
 repositorio/RepositorioAluno.class
-model/CadastroPersonalMB.class
+control/AlunosMB.class
