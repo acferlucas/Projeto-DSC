@@ -13,7 +13,8 @@ and open the template in the editor.
         <title> personals Web</title>
     </h:head>
     <h:body>
-        <h1>Tabela de personals</h1>
+        <h1><h:outputText value="Bem vindo, #{contadorMB.personalNome}"/></h1>
+        <h:outputText value="Tabela Personais"/>
         <h:dataTable border="1" value="#{personaisMB.personais}" var="personal">
             <h:column>
                 <f:facet name="header">Nome</f:facet>
@@ -36,6 +37,6 @@ and open the template in the editor.
                     #{personal.endereco}
             </h:column>
         </h:dataTable>
-        <h:button value="Novo Cadastro" outcome="personais.xhtml"/>
+        <h:button value="Novo Cadastro" outcome="cadastropersonal.xhtml"/>
     </h:body>
 </html>
