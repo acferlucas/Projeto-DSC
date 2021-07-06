@@ -14,27 +14,35 @@ and open the template in the editor.
     </h:head>
     <h:body>
         <h1><h:outputText value="Bem vindo, #{contadorMB.personalNome}"/></h1>
-        <h:outputText value="Tabela Personais"/>
-        <h:dataTable border="1" value="#{personaisMB.personais}" var="personal">
+        <h2><h:outputText value="Tabela Alunos"/></h2><br/>
+        <h:dataTable border="1" value="#{alunosMB.alunos}" var="aluno">
             <h:column>
                 <f:facet name="header">Nome</f:facet>
-                    #{personal.nome}
+                    #{aluno.nome}
             </h:column>
             <h:column>
                 <f:facet name="header">Data Nascimento</f:facet>
-                    #{personal.nascimento}
+                    #{aluno.nascimento}
             </h:column>
             <h:column>
                 <f:facet name="header">Email</f:facet>
-                    #{personal.email}
+                    #{aluno.email}
             </h:column>
             <h:column>
                 <f:facet name="header">Cidade</f:facet>
-                    #{personal.cidade}
+                    #{aluno.cidade}
             </h:column>
             <h:column>
                 <f:facet name="header">Endereço</f:facet>
-                    #{personal.endereco}
+                    #{aluno.endereco}
+            </h:column>
+            <h:column>
+                <f:facet name="header">Peso</f:facet>
+                    #{aluno.peso}
+            </h:column>
+            <h:column>
+                <f:facet name="header">Endereço</f:facet>
+                    #{aluno.altura}
             </h:column>
         </h:dataTable>
         <h:button value="Novo Cadastro" outcome="cadastropersonal.xhtml"/>

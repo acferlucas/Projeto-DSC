@@ -13,42 +13,35 @@ and open the template in the editor.
         <title>Alunos Web</title>
     </h:head>
     <h:body>
-        <h1>Tabela de Alunos</h1>
-        
-        
-        
-        
-        
         <h1><h:outputText value="Bem vindo, "/><h:outputText value="#{contadorMB.alunoNome}"/></h1>
-        <h:outputText value="Tabela Alunos"/>
-        <h:dataTable border="1" value="#{alunosMB.alunos}" var="aluno">
+        <h2><h:outputText value="Personais Disponiveis"/></h2><br/>
+        <h:dataTable border="1" value="#{personaisMB.personais}" var="personal">
             <h:column>
                 <f:facet name="header">Nome</f:facet>
-                    #{aluno.nome}
+                    #{personal.nome}
             </h:column>
             <h:column>
                 <f:facet name="header">Data Nascimento</f:facet>
-                    #{aluno.nascimento}
+                    #{personal.nascimento}
             </h:column>
             <h:column>
                 <f:facet name="header">Email</f:facet>
-                    #{aluno.email}
+                    #{personal.email}
             </h:column>
             <h:column>
                 <f:facet name="header">Cidade</f:facet>
-                    #{aluno.cidade}
+                    #{personal.cidade}
             </h:column>
             <h:column>
                 <f:facet name="header">Endereço</f:facet>
-                    #{aluno.endereco}
+                    #{personal.endereco}
             </h:column>
             <h:column>
-                <f:facet name="header">Medidas</f:facet>
-                    #{aluno.altura}
-                    #{aluno.peso}
+                <f:facet name="header">Contratos</f:facet>
+                <h:button value="Contratar"/>
             </h:column>
-        </h:dataTable>
-        <h:button value="Novo Aluno" outcome="cadastroaluno.xhtml" />
+        </h:dataTable><br/>
+        <h:button value="Cadastrar novo Aluno" outcome="cadastroaluno.xhtml" />
     </h:body>
 </html>
 
