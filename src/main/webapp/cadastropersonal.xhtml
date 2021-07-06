@@ -13,7 +13,7 @@
      <h:form>
           <h:panelGrid columns="2">
                 <h:outputLabel value="ID:" />
-                <h:inputText id="id" value="#{cadastroPersonalMB.codigo}" />
+                <h:outputText id="id" value="#{cadastroPersonalMB.codigo}" />
                 
                 <h:outputLabel value="Nome:" />
                 <h:inputText id="nome" value="#{cadastroPersonalMB.personalbean.nome}" />
@@ -31,7 +31,7 @@
                 <h:inputText id="email" value="#{cadastroPersonalMB.personalbean.email}" />
                 
                 <h:outputLabel value="Senha:" />
-                <h:inputText id="senha" value="#{cadastroPersonalMB.personalbean.senha}" />
+                <h:inputSecret id="senha" value="#{cadastroPersonalMB.personalbean.senha}" />
           </h:panelGrid>
          <h:commandButton  value="Salvar" action="#{cadastroPersonalMB.salvar}"/>
      </h:form>

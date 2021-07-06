@@ -13,7 +13,8 @@ and open the template in the editor.
         <title> Alunos Web</title>
     </h:head>
     <h:body>
-        <h1>Tabela de Alunos</h1>
+        <h1><h:outputText value="Bem vindo, "/><h:outputText value="#{contadorMB.alunoNome}"/></h1>
+        <h:outputText value="Tabela Alunos"/>
         <h:dataTable border="1" value="#{alunosMB.alunos}" var="aluno">
             <h:column>
                 <f:facet name="header">Nome</f:facet>
