@@ -4,42 +4,56 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
      xmlns:h="http://java.sun.com/jsf/html"
      xmlns:f="http://java.sun.com/jsf/core"
-    >
+      xmlns:p="http://primefaces.org/ui"
+     >
 
 <h:head>
+     <title>Cadastro Web</title>
+     <h:outputStylesheet library="css" name="register.css"/>
 </h:head>
 <h:body>
-	<h1><h:outputText value="Cadastro Aluno:"/></h1>
-     <h:form>
-          <h:panelGrid columns="2">
-                <h:outputLabel value="ID:" />
-                <h:outputText id="id" value="#{cadastroAlunoMB.codigo}" />
-                
-                <h:outputLabel value="Nome:" />
-                <h:inputText id="nome" value="#{cadastroAlunoMB.alunobean.nome}" />
-
-                <h:outputLabel value="Data de Nascimento:" />
-                <h:inputText id="nascimento" value="#{cadastroAlunoMB.alunobean.nascimento}" />
-                
-                <h:outputLabel value="Endereço" />
-                <h:inputText id="endereco" value="#{cadastroAlunoMB.alunobean.endereco}" />
-                
-                <h:outputLabel value="Cidade :" />
-                <h:inputText id="cidade" value="#{cadastroAlunoMB.alunobean.cidade}" />
-
-                <h:outputLabel value="Email:" />
-                <h:inputText id="email" value="#{cadastroAlunoMB.alunobean.email}" />
-                
-                <h:outputLabel value="Altura : " />
-                <h:inputText id="altura" value="#{cadastroAlunoMB.altura}" />
-                
-                <h:outputLabel value="Peso : " />
-                <h:inputText id="peso" value="#{cadastroAlunoMB.peso}" />
-                
-                <h:outputLabel value="Senha:" />
-                <h:inputSecret id="senha" value="#{cadastroAlunoMB.alunobean.senha}" />
-          </h:panelGrid>
-         <h:commandButton  value="Salvar" action="#{cadastroAlunoMB.salvar}"/>
-     </h:form>
+    <main>
+        <div class="header" >
+          <p:graphicImage library="imagens" name="logotext.png"/>
+          <h1><h:outputText value="Cadastro Aluno:"/></h1>
+        </div>
+        <h:form>
+         <div class="p-field p-grid">
+            <label for="nome" class="p-col-fixed" style="width:200px">Nome :</label>
+            <p:inputText id="nome" type="text" value="#{cadastroAlunoMB.alunobean.nome}" />
+         </div>
+         <div class="p-field p-grid">
+            <label for="nascimento" class="p-col-fixed" style="width:200px">Data de Nascimento :</label>
+            <p:inputText id="nascimento" type="text" value="#{cadastroAlunoMB.alunobean.nascimento}" />
+         </div>
+         <div class="p-field p-grid">
+            <label for="endereco" class="p-col-fixed" style="width:200px">Endereço :</label>
+            <p:inputText id="endereco" type="text" value="#{cadastroAlunoMB.alunobean.endereco}" />
+         </div>
+         <div class="p-field p-grid">
+            <label for="peso" class="p-col-fixed" style="width:200px">Peso :</label>
+            <p:inputText id="peso" type="text" value="#{cadastroAlunoMB.peso}" />
+         </div>
+         <div class="p-field p-grid">
+            <label for="altura" class="p-col-fixed" style="width:200px">Altura :</label>
+            <p:inputText id="altura" type="text" value="#{cadastroAlunoMB.altura}" />
+         </div>
+         <div class="p-field p-grid">
+            <label for="cidade" class="p-col-fixed" style="width:200px">Cidade :</label>
+            <p:inputText id="cidade" type="text" value="#{cadastroAlunoMB.alunobean.cidade}"/>
+         </div>
+         <div class="p-field p-grid">
+            <label for="email" class="p-col-fixed" style="width:200px">Email :</label>
+            <p:inputText id="email" type="text" value="#{cadastroAlunoMB.alunobean.email}" />
+         </div>
+         <div class="p-field p-grid">
+            <label for="senha" class="p-col-fixed" style="width:200px">Senha :</label>
+            <p:password id="senha" value="#{cadastroAlunoMB.alunobean.senha}" />
+         </div>
+         <div class="button-container">
+            <p:commandButton value="Salvar" action="#{cadastroAlunoMB.salvar}"/>
+         </div>
+        </h:form>
+    </main>
 </h:body>
 </html>

@@ -7,7 +7,8 @@ and open the template in the editor.
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:f="http://xmlns.jcp.org/jsf/core">
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+       xmlns:p="http://primefaces.org/ui">
     
     <h:head>
         <title>Alunos Web</title>
@@ -15,32 +16,24 @@ and open the template in the editor.
     <h:body>
         <h1><h:outputText value="Bem vindo, "/><h:outputText value="#{contadorMB.alunoNome}"/></h1>
         <h2><h:outputText value="Personais Disponiveis"/></h2><br/>
-        <h:dataTable border="1" value="#{personaisMB.personais}" var="personal">
-            <h:column>
-                <f:facet name="header">Nome</f:facet>
-                    #{personal.nome}
-            </h:column>
-            <h:column>
-                <f:facet name="header">Data Nascimento</f:facet>
-                    #{personal.nascimento}
-            </h:column>
-            <h:column>
-                <f:facet name="header">Email</f:facet>
-                    #{personal.email}
-            </h:column>
-            <h:column>
-                <f:facet name="header">Cidade</f:facet>
-                    #{personal.cidade}
-            </h:column>
-            <h:column>
-                <f:facet name="header">Endereço</f:facet>
-                    #{personal.endereco}
-            </h:column>
-            <h:column>
-                <f:facet name="header">Contratos</f:facet>
-                <h:button value="Contratar"/>
-            </h:column>
-        </h:dataTable><br/>
+        <div class="card">
+         <h:form id="form">
+             <p:dataTable id="personais" var="personal" value="#{personaisMB.personais}">
+            <p:column headerText="Code">
+                <h:outputText value="#{personal.id}" />
+            </p:column>
+            <p:column headerText="nome">
+                <h:outputText value="#{personal.nome}" />
+            </p:column>
+            <p:column headerText="Email">
+                <h:outputText value="#{personal.email}" />
+            </p:column>
+            <p:column headerText="Cidade">
+                <h:outputText value="#{personal.cidade}" />
+            </p:column>
+          </p:dataTable>
+        </h:form>
+        </div>
         <h:button value="Cadastrar novo Aluno" outcome="cadastroaluno.xhtml" />
     </h:body>
 </html>

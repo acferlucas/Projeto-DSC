@@ -1,24 +1,33 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://java.sun.com/jsf/html">
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
     <h:head>
         <title>Login Web</title>
+        <h:outputStylesheet library="css" name="login.css"/>
     </h:head>
     <h:body>
-      <h:form id="formLogin">
-        <h1><h:outputText id="bemVindo" value="Bem vindo(a) ao sistema."/></h1>
-        <h:panelGrid id="gridLoginSenha" columns="2">
-          <h:outputText id="loginLabel" value="Login:"/>
-          <h:inputText id="login" value=""/>
-
-          <h:outputText id="senhaLabel" value="Senha:"/>
-          <h:inputSecret id="senha" value=""/><br/>
-          
-        </h:panelGrid>
-        <h:commandButton id="botao" value="Entrar"/><br/><br/>
-      </h:form>
-        <h:button value="Que se cadastrar como aluno  ? Clique Aqui" outcome="cadastroaluno.xhtml" ></h:button><br/><br/>
-        <h:button value="Que se cadastrar como Personal  ? Clique Aqui" outcome="cadastropersonal.xhtml" ></h:button>
+       <main>
+        <div>  
+            <p:graphicImage library="imagens" name="logotext.png"/>
+        </div>
+        <h:form id="formLogin">
+           <p:panelGrid columns="2">
+               <p:outputLabel value="Username:"/>
+               <p:inputText required="true"/>
+                 <p:outputLabel value="Senha:"/>
+                 <p:password required="true"/>
+           </p:panelGrid>
+           <div class="button-container">
+               <p:button value="Submit" />
+           </div>
+        </h:form>
+          <div class="card">
+              <p:link outcome="cadastroaluno.xhtml" value="Que se cadastrar como aluno ? clique aqui"/>
+              <p:link outcome="cadastropersonal.xhtml" value="Que se cadastrar como Personal ? clique aqui"/>
+          </div>
+      </main>
     </h:body>
 </html>
