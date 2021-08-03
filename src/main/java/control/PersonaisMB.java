@@ -18,7 +18,7 @@ public class PersonaisMB implements Serializable{
     @PostConstruct
     public void init(){
         System.out.println("Iniciando via JSF - ViewScoped");
-        this.personais = RepositorioPersonal.getCurrentInstance().readAll();
+       // this.personais = RepositorioPersonal.getCurrentInstance().readAll();
     }
 
     public List<Personal> getPersonais() {

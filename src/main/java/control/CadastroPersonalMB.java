@@ -14,12 +14,17 @@ import repositorio.RepositorioPersonal;
 @Named
 public class CadastroPersonalMB implements Serializable{
     
-     @EJB
+    
+    @EJB
     private Personal personalbean;
     
- 	@EJB
- 	private ContadorAcessosBean contadorAcessosBean;
+    @EJB
+    private ContadorAcessosBean contadorAcessosBean;
+        
+    @EJB
+    private RepositorioPersonal repositorioPersonal;
      
+    
     private int codigo;
 
     public Personal getPersonalbean() {
@@ -42,7 +47,7 @@ public class CadastroPersonalMB implements Serializable{
         
        // personalbean.setId(Integer.parseInt(codigo));
     	personalbean.setId(contadorAcessosBean.contadoratualPersonal());
-        RepositorioPersonal.getCurrentInstance().create(personalbean);
+        this.repositorioPersonal.create(personalbean);
         contadorAcessosBean.incrementarPersonal();
         contadorAcessosBean.setNomePersonal(personalbean.getNome());
         System.out.println("Personal : " +personalbean.getNome() + "Salvo com sucesso");
